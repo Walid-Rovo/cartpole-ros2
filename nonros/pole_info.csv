@@ -1,0 +1,65 @@
+Info on the element
+___________________
+01/18/2023 00:22:47
+
+Name of the document,pole
+Label Name,Body
+Internal Name,Body
+Name of the element,
+Object type (Shape),Solid
+Object type,Part::TopoShape / PartDesign::Body
+
+Mouse coordinates,X,0.0,mm,Y,0.0,mm,Z,0.0,mm
+
+Color of the lection
+Red,0,Green,0,Blue,0,Transparence,0
+
+Couleur Objet (float) ,Rouge,0.800000011920929,Vert,0.800000011920929,Bleu,0.800000011920929,Transparence,0.0
+Couleur Objet (int  ) ,Rouge,204,Vert,204,Bleu,204,Transparence,0
+
+Couleur Ligne(s) (float) ,Rouge,0.09803921729326248,Vert,0.09803921729326248,Bleu,0.09803921729326248,Transparence,0.0
+Couleur Ligne(s) (int  ) ,Rouge,25,Vert,25,Bleu,25,Transparence,0
+
+Couleur Point(s) (float) ,Rouge,0.09803921729326248,Vert,0.09803921729326248,Bleu,0.09803921729326248,Transparence,0.0
+Couleur Point(s) (int  ) ,Rouge,25,Vert,25,Bleu,25,Transparence,0
+
+Length of the object,0.0,mm
+Perimeter of the shape,4859.5376,mm
+
+
+Plane, XY:,0.0 deg, coordinates:,[,0.0 , 0.0,]  [,0.0 , 0.0,]
+Plane, YZ:,0.0 deg, coordinates:,[,0.0 , 0.0,]  [,0.0 , 0.0,]
+Plane, ZX:,0.0 deg, coordinates:,[,0.0 , 0.0,]  [,0.0 , 0.0,]
+
+The form surface,63687.2194,mm2
+Surface of the face,0.0,mm2
+
+Volume of the form,424381.7954,mm3
+Weight,1145.8308,g, Density:,2.7
+
+Center of the shape, X:,-0.0,mm, Y:,-10.0,mm, Z:,253.1883,mm
+Center of mass, X:,0.0,mm, Y:,-10.0,mm, Z:,253.1883,mm
+BoundBox, X:,40.0,mm, Y:,20.0,mm, Z:,546.0849,mm
+BoundBox Diagonal,547.9131,mm
+
+Direction, X:,0.0, Y:,-16.0, Z:,0.0
+
+Matrix of inertia,mm^5
+, X:,10186642006.0185, Y:,-0.0, Z:,0.0015, :,0.0
+, X:,-0.0, Y:,10227667821.3218, Z:,-0.0, :,0.0
+, X:,0.0015, Y:,-0.0, Z:,68807940.59, :,0.0
+, X:,0.0, Y:,0.0, Z:,0.0, :,1.0
+
+Matrix inertia with mass,gmm2
+, X:,27503933.4162, Y:,-0.0, Z:,0.0
+, X:,-0.0, Y:,27614703.1176, Z:,-0.0
+, X:,0.0, Y:,-0.0, Z:,185781.4396
+
+Matrix Determinant,7.168795931935665e+27
+Determinant decimal,7168795931935665222041206784
+
+Material,
+Name,Density,Volume,Unit,Price (kg/dm3),Cost total,Devise,Info
+Metal Aluminium (Al),2.7,424381.7954,mm3,10.0,11.4583, Eu,adapt Price
+
+End ,pole

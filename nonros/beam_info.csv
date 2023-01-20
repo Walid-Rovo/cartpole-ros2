@@ -1,0 +1,65 @@
+Info on the element
+___________________
+01/18/2023 00:17:17
+
+Name of the document,beam
+Label Name,Body
+Internal Name,Body
+Name of the element,
+Object type (Shape),Compound
+Object type,Part::TopoShape / PartDesign::Body
+
+Mouse coordinates,X,0.0,mm,Y,0.0,mm,Z,0.0,mm
+
+Color of the lection
+Red,0,Green,0,Blue,0,Transparence,0
+
+Couleur Objet (float) ,Rouge,0.800000011920929,Vert,0.800000011920929,Bleu,0.800000011920929,Transparence,0.0
+Couleur Objet (int  ) ,Rouge,204,Vert,204,Bleu,204,Transparence,0
+
+Couleur Ligne(s) (float) ,Rouge,0.09803921729326248,Vert,0.09803921729326248,Bleu,0.09803921729326248,Transparence,0.0
+Couleur Ligne(s) (int  ) ,Rouge,25,Vert,25,Bleu,25,Transparence,0
+
+Couleur Point(s) (float) ,Rouge,0.09803921729326248,Vert,0.09803921729326248,Bleu,0.09803921729326248,Transparence,0.0
+Couleur Point(s) (int  ) ,Rouge,25,Vert,25,Bleu,25,Transparence,0
+
+Length of the object,0.0,mm
+Perimeter of the shape,16310.6274,mm
+
+
+Plane, XY:,0.0 deg, coordinates:,[,0.0 , 0.0,]  [,0.0 , 0.0,]
+Plane, YZ:,0.0 deg, coordinates:,[,0.0 , 0.0,]  [,0.0 , 0.0,]
+Plane, ZX:,0.0 deg, coordinates:,[,0.0 , 0.0,]  [,0.0 , 0.0,]
+
+The form surface,156905.7085,mm2
+Surface of the face,0.0,mm2
+
+Volume of the form,796000.0,mm3
+Weight,2149.2,g, Density:,2.7
+
+Center of the shape, X:,0.0,mm, Y:,134.1954,mm, Z:,-580.0,mm
+Center of mass, X:,-0.0,mm, Y:,0.0,mm, Z:,-580.0,mm
+BoundBox, X:,1000.0,mm, Y:,288.3909,mm, Z:,20.0,mm
+BoundBox Diagonal,1040.9463,mm
+
+Direction, X:,0.0, Y:,-18.0, Z:,0.0
+
+Matrix of inertia,mm^5
+, X:,26292666.6666, Y:,-0.0, Z:,-0.0, :,0.0
+, X:,-0.0, Y:,33179813000.0, Z:,0.0, :,0.0
+, X:,-0.0, Y:,0.0, Z:,33179813000.0, :,0.0
+, X:,0.0, Y:,0.0, Z:,0.0, :,1.0
+
+Matrix inertia with mass,gmm2
+, X:,70990.2, Y:,-0.0, Z:,-0.0
+, X:,-0.0, Y:,89585495.1, Z:,0.0
+, X:,-0.0, Y:,0.0, Z:,89585495.1
+
+Matrix Determinant,2.89455964891603e+28
+Determinant decimal,28945596489160298153549758464
+
+Material,
+Name,Density,Volume,Unit,Price (kg/dm3),Cost total,Devise,Info
+Metal Aluminium (Al),2.7,796000.0,mm3,10.0,21.492, Eu,adapt Price
+
+End ,beam

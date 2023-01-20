@@ -1,0 +1,65 @@
+Info on the element
+___________________
+01/17/2023 21:36:51
+
+Name of the document,cart
+Label Name,Body
+Internal Name,Body
+Name of the element,
+Object type (Shape),Solid
+Object type,Part::TopoShape / PartDesign::Body
+
+Mouse coordinates,X,0.0,mm,Y,0.0,mm,Z,0.0,mm
+
+Color of the lection
+Red,0,Green,0,Blue,0,Transparence,0
+
+Couleur Objet (float) ,Rouge,0.800000011920929,Vert,0.800000011920929,Bleu,0.800000011920929,Transparence,0.0
+Couleur Objet (int  ) ,Rouge,204,Vert,204,Bleu,204,Transparence,0
+
+Couleur Ligne(s) (float) ,Rouge,0.09803921729326248,Vert,0.09803921729326248,Bleu,0.09803921729326248,Transparence,0.0
+Couleur Ligne(s) (int  ) ,Rouge,25,Vert,25,Bleu,25,Transparence,0
+
+Couleur Point(s) (float) ,Rouge,0.09803921729326248,Vert,0.09803921729326248,Bleu,0.09803921729326248,Transparence,0.0
+Couleur Point(s) (int  ) ,Rouge,25,Vert,25,Bleu,25,Transparence,0
+
+Length of the object,0.0,mm
+Perimeter of the shape,2350.0436,mm
+
+
+Plane, XY:,0.0 deg, coordinates:,[,0.0 , 0.0,]  [,0.0 , 0.0,]
+Plane, YZ:,0.0 deg, coordinates:,[,0.0 , 0.0,]  [,0.0 , 0.0,]
+Plane, ZX:,0.0 deg, coordinates:,[,0.0 , 0.0,]  [,0.0 , 0.0,]
+
+The form surface,30262.802,mm2
+Surface of the face,0.0,mm2
+
+Volume of the form,179100.7463,mm3
+Weight,483.572,g, Density:,2.7
+
+Center of the shape, X:,-0.0,mm, Y:,0.0,mm, Z:,0.0,mm
+Center of mass, X:,-0.0,mm, Y:,0.0429,mm, Z:,2.9301,mm
+BoundBox, X:,100.0,mm, Y:,50.0,mm, Z:,50.0,mm
+BoundBox Diagonal,122.4745,mm
+
+Direction, X:,98.0, Y:,-0.0, Z:,0.0
+
+Matrix of inertia,mm^5
+, X:,88658676.0137, Y:,0.0, Z:,-0.0, :,0.0
+, X:,0.0, Y:,188440272.5883, Z:,22504.1611, :,0.0
+, X:,-0.0, Y:,22504.1611, Z:,198577288.384, :,0.0
+, X:,0.0, Y:,0.0, Z:,0.0, :,1.0
+
+Matrix inertia with mass,gmm2
+, X:,239378.4252, Y:,0.0, Z:,-0.0
+, X:,0.0, Y:,508788.736, Z:,60.7612
+, X:,-0.0, Y:,60.7612, Z:,536158.6786
+
+Matrix Determinant,3.3176039191597396e+24
+Determinant decimal,3317603919159739560230912
+
+Material,
+Name,Density,Volume,Unit,Price (kg/dm3),Cost total,Devise,Info
+Metal Aluminium (Al),2.7,179100.7463,mm3,10.0,4.8357, Eu,adapt Price
+
+End ,cart
