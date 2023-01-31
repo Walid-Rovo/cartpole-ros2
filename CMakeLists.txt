@@ -4,7 +4,7 @@ project(cartpole_01)
 find_package(ament_cmake REQUIRED)
 
 install(
-  DIRECTORY launch meshes rviz urdf
+  DIRECTORY launch urdf sdf meshes
   DESTINATION share/${PROJECT_NAME}
 )
 
