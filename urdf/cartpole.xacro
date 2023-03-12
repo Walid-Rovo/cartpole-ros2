@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="cartpole">
 	<!-- Properties -->
-	<xacro:property name="obj_scale" value="1.000" />
+	<xacro:property name="obj_scale" value="0.001" />
 	<!-- Define colors -->
 	<material name="black">
 		<color rgba="0.0 0.0 0.0 1.0" />
@@ -15,7 +15,7 @@
 	<xacro:macro name="beam_geometry">
 		<origin rpy="0.0 0 0" xyz="0 0 0" />
 		<geometry>
-			<mesh filename="$(find cartpole_01)/meshes/beam.dae" scale="${obj_scale} ${obj_scale} ${obj_scale}" />
+			<mesh filename="package://meshes/beam-Body.obj" scale="${obj_scale} ${obj_scale} ${obj_scale}" />
 		</geometry>
 	</xacro:macro>
 	<joint name="world_to_beam" type="fixed">
@@ -37,32 +37,30 @@
 		</inertial>
 	</link>
 	<gazebo reference="beam">
-		<!-- <mu1>
+		<mu1>
 			0.2
 		</mu1>
 		<mu2>
 			0.2
-		</mu2> -->
-		<visual>
-			<!-- Chrome: http://www.barradeau.com/nicoptere/dump/materials.html -->
-			<material>
-				<diffuse>
-					0.4 0.4 0.4 1
-				</diffuse>
-				<ambient>
-					0.25 0.25 0.25 1
-				</ambient>
-				<specular>
-					0.774597 0.774597 0.774597 1
-				</specular>
-			</material>
-		</visual>
+		</mu2>
+		<!-- Chrome: http://www.barradeau.com/nicoptere/dump/materials.html -->
+		<material>
+			<diffuse>
+				0.4 0.4 0.4 1
+			</diffuse>
+			<ambient>
+				0.25 0.25 0.25 1
+			</ambient>
+			<specular>
+				0.774597 0.774597 0.774597 1
+			</specular>
+		</material>
 	</gazebo>
 	<!-- Cart -->
 	<xacro:macro name="cart_geometry">
 		<origin rpy="0.0 0 0" xyz="0 0 0" />
 		<geometry>
-			<mesh filename="$(find cartpole_01)/meshes/cart.dae" scale="${obj_scale} ${obj_scale} ${obj_scale}" />
+			<mesh filename="package://meshes/cart-Body.obj" scale="${obj_scale} ${obj_scale} ${obj_scale}" />
 		</geometry>
 	</xacro:macro>
 	<joint name="beam_to_cart" type="prismatic">
@@ -73,6 +71,13 @@
 		<origin rpy="0 0 0" xyz="0 0 0" />
 		<dynamics damping="0.1" />
 	</joint>
+		<gazebo>
+		<plugin filename="libignition-gazebo-apply-joint-force-system.so" name="ignition::gazebo::systems::ApplyJointForce">
+			<joint_name>
+				beam_to_cart
+			</joint_name>
+		</plugin>
+	</gazebo>
 	<link name="cart">
 		<visual>
 			<xacro:cart_geometry />
@@ -87,32 +92,30 @@
 		</inertial>
 	</link>
 	<gazebo reference="cart">
-		<!-- <mu1>
+		<mu1>
 			0.2
 		</mu1>
 		<mu2>
 			0.2
-		</mu2> -->
-		<visual>
-			<!-- Chrome: http://www.barradeau.com/nicoptere/dump/materials.html -->
-			<material>
-				<diffuse>
-					0.4 0.4 0.4 1
-				</diffuse>
-				<ambient>
-					0.25 0.25 0.25 1
-				</ambient>
-				<specular>
-					0.774597 0.774597 0.774597 1
-				</specular>
-			</material>
-		</visual>
+		</mu2>
+		<!-- Chrome: http://www.barradeau.com/nicoptere/dump/materials.html -->
+		<material>
+			<diffuse>
+				0.4 0.4 0.4 1
+			</diffuse>
+			<ambient>
+				0.25 0.25 0.25 1
+			</ambient>
+			<specular>
+				0.774597 0.774597 0.774597 1
+			</specular>
+		</material>
 	</gazebo>
 	<!-- Pole -->
 	<xacro:macro name="pole_geometry">
 		<origin rpy="0.0 0 0" xyz="0 0 0" />
 		<geometry>
-			<mesh filename="$(find cartpole_01)/meshes/pole.dae" scale="${obj_scale} ${obj_scale} ${obj_scale}" />
+			<mesh filename="package://meshes/pole-Body.obj" scale="${obj_scale} ${obj_scale} ${obj_scale}" />
 		</geometry>
 	</xacro:macro>
 	<joint name="cart_to_pole" type="continuous">
@@ -120,9 +123,16 @@
 		<parent link="cart" />
 		<child link="pole" />
 		<limit effort="1000.0" velocity="5.0" />
-		<origin rpy="0 -0.5 0" xyz="0 -0.025 0" />
+		<origin rpy="0 0.01 0" xyz="0 -0.025 0" />
 		<dynamics damping="0.01" />
 	</joint>
+	<gazebo>
+		<plugin filename="libignition-gazebo-apply-joint-force-system.so" name="ignition::gazebo::systems::ApplyJointForce">
+			<joint_name>
+				cart_to_pole
+			</joint_name>
+		</plugin>
+	</gazebo>
 	<link name="pole">
 		<visual>
 			<xacro:pole_geometry />
@@ -137,49 +147,37 @@
 		</inertial>
 	</link>
 	<gazebo reference="pole">
-		<!-- <mu1>
+		<mu1>
 			0.2
 		</mu1>
 		<mu2>
 			0.2
-		</mu2> -->
-		<visual>
-			<!-- Chrome: http://www.barradeau.com/nicoptere/dump/materials.html -->
-			<material>
-				<diffuse>
-					0.4 0.4 0.4 1
-				</diffuse>
-				<ambient>
-					0.25 0.25 0.25 1
-				</ambient>
-				<specular>
-					0.774597 0.774597 0.774597 1
-				</specular>
-			</material>
-		</visual>
+		</mu2>
+		<!-- Polished copper: http://www.barradeau.com/nicoptere/dump/materials.html -->
+		<material>
+			<diffuse>
+				<!-- 0.5508 0.2118 0.066 1 -->
+				1 1 1 1
+			</diffuse>
+			<ambient>
+				<!-- 0.2295 0.08825 0.0275 1 -->
+				1 1 1 1
+			</ambient>
+			<specular>
+				<!-- 0.580594 0.223257 0.0695701 1 -->
+				1 1 1 1
+			</specular>
+		</material>
 	</gazebo>
 	<!-- Joint states plugin -->
 	<gazebo>
-	    <!-- <plugin filename="libignition-gazebo-joint-state-publisher-system.so" name="ignition::gazebo::systems::JointStatePublisher"/> -->
-		<!-- <plugin
-			filename="libignition-gazebo-joint-position-controller-system.so"
-			name="ignition::gazebo::systems::JointPositionController">
-				<joint_name>cart_to_pole</joint_name>
-				<p_gain>10</p_gain>
-				<i_gain>1</i_gain>
-				<d_gain>1</d_gain>
-    	</plugin> -->
-		<!-- <plugin
-			filename="libignition-gazebo-physics-system.so"
-			name="ignition::gazebo::systems::Physics">
+		<plugin filename="libignition-gazebo-joint-state-publisher-system.so" name="ignition::gazebo::systems::JointStatePublisher">
+			<ros>
+				<remapping>~/out:=joint_states</remapping>
+			</ros>
+	      	<update_rate>30</update_rate>
+		  	<joint_name>beam_to_cart</joint_name>
+		  	<joint_name>cart_to_pole</joint_name>
 		</plugin>
-		<plugin
-			filename="libignition-gazebo-scene-broadcaster-system.so"
-			name="ignition::gazebo::systems::SceneBroadcaster">
-		</plugin>
-		<plugin
-			filename="libignition-gazebo-apply-link-wrench-system.so"
-			name="ignition::gazebo::systems::ApplyLinkWrench">
-		</plugin> -->
 	</gazebo>
 </robot>
